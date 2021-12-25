@@ -66,15 +66,23 @@
             const todoInput = document.getElementById("todoInput");
             // move to line number 55 or move to 33 you will get the concept
             console.log(resetvalOfInput());
-            for(let i=0; i<todoArr.length;i++){
-                const todoInput=todoArr[i];
-
+            for (let i = 0; i < todoArr.length; i++) {
+                const todoInput = todoArr[i];
+                // move to the line number 77 we will use that functioanlity here
+                const newListItem=createListItem(todoInput);
+                // 
             }
 
         }
 
 
-        
+        // now we will add the fifth functionality in the code 
+        function createListItem(listItemText) {
+            const newListItem = document.createElement("li");
+            newListItem.innerText = listItemText;
+            return newListItem;
+            // now return to line number 72 
+        }
     </script>
 </body>
 
