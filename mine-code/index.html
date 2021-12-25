@@ -68,9 +68,11 @@
             console.log(resetvalOfInput());
             for (let i = 0; i < todoArr.length; i++) {
                 const todoInput = todoArr[i];
-                // move to the line number 77 we will use that functioanlity here
-                const newListItem=createListItem(todoInput);
-                // 
+                // move to the line number 81 we will use that functioanlity here
+                const newListItem = createListItem(todoInput);
+                // move to the line number 89 we will use that functioanlity here
+                const deleteButton = createListItemDeleteButton(todoInput);
+
             }
 
         }
@@ -82,6 +84,22 @@
             newListItem.innerText = listItemText;
             return newListItem;
             // now return to line number 72 
+        }
+
+        // now we will add the sixth functionality in the code 
+        function createListItemDeleteButton(todoText) {
+            const deleteButton = document.createElement("button");
+            deleteButton.innerText = "delete";
+            deleteButton.onclick = function () {
+                const filteredArr = todoArr.filter(function (arrElement) {
+                    return todoText !== arrElement;
+                });
+                todoArr = filteredArr;
+                // now move to the line number 62
+                renderMyTodoList();
+            };
+
+            return deleteButton;
         }
     </script>
 </body>
