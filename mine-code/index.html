@@ -40,7 +40,11 @@
             deleteButton.innerText="Delete";
             let updateButton=document.createElement("button");
             updateButton.innerText="Update";
-            
+
+            // now we will append them in the main html 
+            todoUnList.appendChild(newListItem);
+            newListItem.appendChild(deleteButton);
+            newListItem.appendChild(updateButton);
 
         });
 
@@ -51,6 +55,8 @@
             document.getElementById("todoInput").value="";
             // now this function will be transfered to first functionalty code at line no 30 
         }
+
+        
     </script>
 </body>
 </html>
