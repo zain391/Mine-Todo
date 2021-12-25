@@ -16,6 +16,8 @@
 
     </ul>
     <script>
+
+
         // first functionalty code 
         let todoArr=[];
         document.
@@ -29,7 +31,20 @@
             todoArr.push(todoInput);
             // jump to ssecond functionality
             console.log(resetvalOfInput());
-        })
+            // now the third functionality it is nested in the first functionalty or we can say in the current functionality
+            
+            // creating elements at run time
+            let newListItem=document.createElement("li");
+            newListItem.innerHTML=todoInput;
+            let deleteButton=document.createElement("button");
+            deleteButton.innerText="Delete";
+            let updateButton=document.createElement("button");
+            updateButton.innerText="Update";
+            
+
+        });
+
+
         // second functionality code 
         const resetvalOfInput=()=>{
             //again  get the input tag and set it to empty value
