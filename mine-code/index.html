@@ -7,13 +7,35 @@
     <title>Mine TODO</title>
 </head>
 <body>
-    <form class="todoform">
+    <form id="todoform">
         <input type="text" id="todoInput" placeholder="Enter TODO Item">
         <button id="todoAddButton" type="submit">ADD</button>
         <button id="todoUpdateButton" style="display: none;">Update</button>
     </form>
     <ul id="todoUnList">
-        
+
     </ul>
+    <script>
+        // first functionalty code 
+        let todoArr=[];
+        document.
+        getElementById("todoform")
+        .addEventListener("submit",function(e){
+            e.preventDefault();
+            // get the input tag
+            const todoInput=document.getElementById("todoInput").value;
+            // get the unorder list tag 
+            const todoUnList=document.getElementById("todoUnList");
+            todoArr.push(todoInput);
+            // jump to ssecond functionality
+            console.log(resetvalOfInput());
+        })
+        // second functionality code 
+        const resetvalOfInput=()=>{
+            //again  get the input tag and set it to empty value
+            document.getElementById("todoInput").value="";
+            // now this function will be transfered to first functionalty code at line no 30 
+        }
+    </script>
 </body>
 </html>
