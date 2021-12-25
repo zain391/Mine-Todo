@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onunload</title>
+</head>
+<body onunload="onunLoad()">
+    <h1>now we will see the onunload function</h1>
+    <h1 id="first" style="background-color: green;"></h1>
+    <script>
+        function onunLoad(event){
+            let h1=document.getElementById("first");
+            h1.innerHTML="i am reloaded becuse you just clicked the refres button or pressed the f5 key";
+            console.log("i am here");
+        }
+    </script>
+</body>
+</html>
