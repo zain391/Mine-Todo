@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On load and on reload </title>
+</head>
+<body>
+    <!-- <h4>now we will store and delete the local storge on the reload and onload</h4> -->
+    <script>
+        let arr=["zain","usama","talha"];
+        let myStr=JSON.stringify(arr);
+        localStorage.setItem("todos",myStr);
+        document.write("mystr i am a string :",myStr,`<br/>`)
+        document.write("arr i am an array :",arr,`<br/>`);
+        let org=JSON.parse(myStr);
+        document.write("org i am an array :",org)
+
+    </script>
+</body>
+</html>
