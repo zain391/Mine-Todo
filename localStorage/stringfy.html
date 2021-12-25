@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stringying the object</title>
+</head>
+<body>
+    <h3>we will see how stringfy function works</h3>
+    <script>
+        let myObj={
+            name:"zain",
+            age:"20",
+            height:5.10
+        }
+        console.log(`type of myObj is ${typeof(myObj)}`,myObj);
+        let myStr=JSON.stringify(myObj);
+        console.log(`type of myStr is ${typeof(myStr)}`,myStr);
+        
+    </script>
+</body>
+</html>
