@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mine TODO</title>
 </head>
+
 <body>
     <form id="todoform">
         <input type="text" id="todoInput" placeholder="Enter TODO Item">
@@ -19,44 +21,61 @@
 
 
         // first functionalty code 
-        let todoArr=[];
+        let todoArr = [];
         document.
-        getElementById("todoform")
-        .addEventListener("submit",function(e){
-            e.preventDefault();
-            // get the input tag
-            const todoInput=document.getElementById("todoInput").value;
-            // get the unorder list tag 
-            const todoUnList=document.getElementById("todoUnList");
-            todoArr.push(todoInput);
-            // jump to ssecond functionality
-            console.log(resetvalOfInput());
-            // now the third functionality it is nested in the first functionalty or we can say in the current functionality
-            
-            // creating elements at run time
-            let newListItem=document.createElement("li");
-            newListItem.innerHTML=todoInput;
-            let deleteButton=document.createElement("button");
-            deleteButton.innerText="Delete";
-            let updateButton=document.createElement("button");
-            updateButton.innerText="Update";
+            getElementById("todoform")
+            .addEventListener("submit", function (e) {
+                e.preventDefault();
+                // get the input tag
+                const todoInput = document.getElementById("todoInput").value;
+                // get the unorder list tag 
+                const todoUnList = document.getElementById("todoUnList");
+                todoArr.push(todoInput);
+                // jump to ssecond functionality
+                console.log(resetvalOfInput());
+                // now the third functionality it is nested in the first functionalty or we can say in the current functionality
+                // continue as below
+                // creating elements at run time
+                let newListItem = document.createElement("li");
+                newListItem.innerHTML = todoInput;
+                let deleteButton = document.createElement("button");
+                deleteButton.innerText = "Delete";
+                let updateButton = document.createElement("button");
+                updateButton.innerText = "Update";
 
-            // now we will append them in the main html 
-            todoUnList.appendChild(newListItem);
-            newListItem.appendChild(deleteButton);
-            newListItem.appendChild(updateButton);
-
-        });
+                // now we will append them in the main html 
+                todoUnList.appendChild(newListItem);
+                newListItem.appendChild(deleteButton);
+                newListItem.appendChild(updateButton);
+                // move to line number 59 we will start from there
+            });
 
 
         // second functionality code 
-        const resetvalOfInput=()=>{
+        const resetvalOfInput = () => {
             //again  get the input tag and set it to empty value
-            document.getElementById("todoInput").value="";
-            // now this function will be transfered to first functionalty code at line no 30 
+            document.getElementById("todoInput").value = "";
+            // now this function will be transfered to first functionalty code at line no 30-35
         }
+
+        // now we will add the forth functionality 
+        function renderMyTodoList() {
+            // again get the following things
+
+            const todoUnList = document.getElementById("todoUnList");
+            const todoInput = document.getElementById("todoInput");
+            // move to line number 55 or move to 33 you will get the concept
+            console.log(resetvalOfInput());
+            for(let i=0; i<todoArr.length;i++){
+                const todoInput=todoArr[i];
+
+            }
+
+        }
+
 
         
     </script>
 </body>
+
 </html>
