@@ -7,6 +7,41 @@
     <title>Local Storage 2nd Practice</title>
 </head>
 <body>
-    
+    <input type="text"  id="input" placeholder="Enter item">
+    <button id="btn">ADD</button>
+    <span id="btn-2"></span>
+    <h3>now we are going to create an array at the run time and then we will store the
+        in the local Storage in key value pair .
+    </h3>
+    <script>
+        let arr=[];
+        function adding(){
+            let btn=document.getElementById("btn");
+            btn.addEventListener("click",function(){
+                let input=document.getElementById("input").value;
+                let span=document.getElementById("btn-2");
+                let newBtn=document.createElement("button");
+                newBtn.innerText="Del Local";
+                newBtn.setAttribute("onclick", "removin()");
+                span.appendChild(newBtn);
+                arr.push(input);
+                for(let i=0; i<arr.length; i++){
+                    let key=[i];
+                    key=key.toString();
+                    localStorage.setItem([key],arr[i]);
+                }
+            })
+        }
+        adding();
+        function removin(){
+                let input=document.getElementById("input").value;
+                arr.push(input);
+                for(let i=0; i<arr.length; i++){
+                    let key=[i];
+                    key=key.toString();
+                    localStorage.removeItem([key],arr[i]);
+                }
+        } 
+    </script>
 </body>
 </html>
