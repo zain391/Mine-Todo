@@ -10,9 +10,13 @@
     <h3>i am going to play with localStorage</h3>
     <script>
         let arr=["zain","usama","harron"];
-        localStorage.removeItem("name")
-        localStorage.removeItem("name1")
-        localStorage.removeItem("name3")
+        for(let i=0; i<arr.length; i++){
+            let key=i;
+            key=key.toString();
+            console.log(typeof(key));
+            console.log(key);
+            localStorage.setItem([key],arr[i]);
+        }
     </script>
 </body>
 </html>
