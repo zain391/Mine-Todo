@@ -72,6 +72,8 @@
                 const newListItem = createListItem(todoInput);
                 // move to the line number 89 we will use that functioanlity here
                 const deleteButton = createListItemDeleteButton(todoInput);
+                // move to the line number 109 we will use that functioanlity here
+                const updateButton = createListItemUpdateButton(todoInput);
 
             }
 
@@ -101,6 +103,34 @@
 
             return deleteButton;
         }
+
+
+        // now we will add the seventh functioanlity in the code 
+        function createListItemUpdateButton(todoText) {
+            const updateButton = document.createElement("button");
+            updateButton.innerText = "Update";
+            updateButton.onclick = function () {
+                const inputElement = document.getElementById("todoInput");
+                const submitButton = document.getElementById("todoSubmitButton");
+                const todoUpdateButton = document.getElementById("updateButton");
+
+                todoUpdateButton.onclick = function () {
+                    for (let index = 0; index < todoArr.length; index++) {
+                        const todoArr = todos[index];
+                        if (todoArr === todoText) {
+                            todoArr[index] = inputElement.value;
+                            renderMyTodoList();
+                        }
+                    }
+                };
+
+                inputElement.value = todoText;
+                submitButton.style.display = "none";
+                todoUpdateButton.style.display = "inline";
+            };
+            return updateButton;
+        }
+    // now move to line number 75
     </script>
 </body>
 
