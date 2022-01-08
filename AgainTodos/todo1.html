@@ -24,27 +24,35 @@
                 let todoInput = document.getElementById("todoInput").value;
                 e.preventDefault();
                 todoArr.push(todoInput);
-                appending();
-                empInp();
+
             })
-            function appending() {
-                let todoInput = document.getElementById("todoInput").value;
-                let todoUnList = document.getElementById("todoUnList");
+            function createListItem(todoInput) {
                 let newListItem = document.createElement("li");
                 newListItem.innerHTML = todoInput;
-                let delbtn = document.createElement("button");
-                let updateBtn = document.createElement("button");
-                delbtn.innerText = "Deltet";
-                updateBtn.innerText = "Update";
-                todoUnList.appendChild(newListItem);
-                newListItem.appendChild(delbtn);
-                newListItem.appendChild(updateBtn);
+                return newListItem;
             }
-            function empInp() {
-                document.getElementById("todoInput").value = "";
+            function createDelBtn(todoInput) {
+                let delBtn = document.createElement("button");
+                delBtn.innerText = "Delete-ME";
+                delBtn.onclick = function () {
+                    // because we want to del the particular item from the display and also 
+                    // from the array so we have to get the array 
+                    const fillterArr=todoArr.filter((arrItems)=>{
+                        return todoInput != arrItems;
+                    })
+                    todoArr=fillterArr;
+                }
+                return delBtn;
             }
-            function delBtn(){
-                
+            function renderMyTodoList() {
+                const todoInput = document.getElementById("todoInput").value;
+                const todoAddBtn = document.getElementById("todoAddBtn");
+                const todoUnList = document.getElementById("todoUnList");
+                todoUnList.innerHTML = "";
+                for (let i = 0; i < todoArr.length; i++) {
+                    const todoInput = todoArr[i];
+
+                }
             }
 
 
