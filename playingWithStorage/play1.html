@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>i am going to play with the local storage</h2>
+    <script>
+        let arr=["zain","usama","tayab"];
+        let strArr=JSON.stringify(arr);
+        console.log(typeof strArr);
+        console.log("i am JSON array ",strArr);
+        let parsingstr=JSON.parse(strArr);
+        console.log(parsingstr);
+        // now we will set the array as the local stroge
+        localStorage.setItem("arrays",strArr);
+        
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
