@@ -69,12 +69,13 @@
           for (let index = 0; index < todos.length; index++) {
             const todo = todos[index];
             if (todo === todoText) {
+              console.log(todo);
               todos[index] = inputElement.value;
+              console.log(todos[index] );
               renderMyTodoList();
             }
           }
         };
-
         inputElement.value = todoText;
         submitButton.style.display = "none";
         todoUpdateButton.style.display = "inline";
