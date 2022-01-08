@@ -6,15 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Second play </title>
 </head>
-<body onload="alerting()">
-  
-    <h2>now we will see how to store the data in the local storage</h2>
+<body onload="load()" onunload="unload()">
     <script>
-        let data=["buy spoon","buy soap","buy broom"];
-        let strData=JSON.stringify(data);
-        function alerting(){
-            alert("whenever you open the page the onload get fired so we will find if it works on the refreshing button or not");
+        function load(){
+            alert("i am onload function")
+        }
+        function unload(){
+            let data=["tap","skipping rope","cup and saucer"];
+            let strData=JSON.stringify(data);
+            localStorage.setItem("crockery",strData);
+            alert("i am unload")
         }
     </script>
+  
+    
 </body>
 </html>
