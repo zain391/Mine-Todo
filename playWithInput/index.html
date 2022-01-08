@@ -7,6 +7,34 @@
     <title>Playing with Input</title>
 </head>
 <body>
-    
+    <h1>i am going to play with input</h1>
+    <input type="text" id="check" placeholder="Enter Something">
+    <button id="Add" onclick="showing()">add</button>
+    <button  id="change">Change Me</button>
+    <h2 style="color: green;" id="val"></h2>
+    <script>
+        let arr=[];
+        function showing(){
+            let todoInput=document.getElementById("check").value;
+            arr.push(todoInput);
+            let h1=document.getElementById("val");
+            h1.innerText=todoInput;
+            document.getElementById("check").value="";
+            console.log(arr);
+            let changeBtn=document.getElementById("change");
+            changeBtn.onclick=function change(){
+                for(let i=0; i<arr.length; i++){
+                    let inpVal=arr[i];
+                    if(inpVal===todoInput){
+                        console.log("value matched");
+                        document.getElementById("check").value=arr[i];
+                        
+                    }     
+                }
+            }
+        }
+        
+        
+    </script>
 </body>
 </html>
