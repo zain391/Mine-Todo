@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Should Work</title>
+</head>
+
+<body>
+    <h1>TODO APP</h1>
+    <form id="todoForm">
+        <input type="text" id="todoInput" placeholder="Enter Todo Item">
+        <button id="todoAddBtn" type="submit">ADD</button>
+        <button id="todoUpdateBtn" style="display: none;">Update</button>
+
+        <ul id="todoUnList">
+
+        </ul>
+        <script>
+            let todoArr = [];
+            document.getElementById("todoForm").addEventListener("submit", function (e) {
+                let todoInput = document.getElementById("todoInput").value;
+                e.preventDefault();
+                todoArr.push(todoInput);
+                appending();
+                empInp();
+            })
+            function appending() {
+                let todoInput = document.getElementById("todoInput").value;
+                let todoUnList = document.getElementById("todoUnList");
+                let newListItem = document.createElement("li");
+                newListItem.innerHTML = todoInput;
+                let delbtn = document.createElement("button");
+                let updateBtn = document.createElement("button");
+                delbtn.innerText = "Deltet";
+                updateBtn.innerText = "Update";
+                todoUnList.appendChild(newListItem);
+                newListItem.appendChild(delbtn);
+                newListItem.appendChild(updateBtn);
+            }
+            function empInp() {
+                document.getElementById("todoInput").value = "";
+            }
+            function delBtn(){
+                
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </form>
+</body>
+
+</html>
